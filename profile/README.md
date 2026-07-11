@@ -1,50 +1,42 @@
 # WormholeSystems
 
-WormholeSystems is a mapping platform for the wormhole community in EVE Online. The platform provides tools for navigation and collaboration in wormhole space.
+Wormhole mapping and collaboration platform for EVE Online — live at [wormhole.systems](https://wormhole.systems/). Real-time chain maps, signature tracking, smart routing and killmail intelligence for corporations and alliances living in wormhole space.
 
-## About
+## Repositories at a glance
 
-WormholeSystems offers wormhole mapping tools for EVE Online players. The platform supports real-time collaboration and provides various features for wormhole exploration and chain management.
+| Repository | What it is | Status |
+|---|---|---|
+| [WormholeSystems](https://github.com/WormholeSystems/WormholeSystems) | The application — Laravel 12, Inertia.js, Vue 3 | [![tests](https://github.com/WormholeSystems/WormholeSystems/actions/workflows/tests.yml/badge.svg)](https://github.com/WormholeSystems/WormholeSystems/actions/workflows/tests.yml) [![linter](https://github.com/WormholeSystems/WormholeSystems/actions/workflows/lint.yml/badge.svg)](https://github.com/WormholeSystems/WormholeSystems/actions/workflows/lint.yml) [![last commit](https://img.shields.io/github/last-commit/WormholeSystems/WormholeSystems)](https://github.com/WormholeSystems/WormholeSystems/commits) |
+| [wormholesystems-containers](https://github.com/WormholeSystems/wormholesystems-containers) | Production docker stack for self-hosting | [![submodules](https://github.com/WormholeSystems/wormholesystems-containers/actions/workflows/update.yml/badge.svg)](https://github.com/WormholeSystems/wormholesystems-containers/actions/workflows/update.yml) [![last commit](https://img.shields.io/github/last-commit/WormholeSystems/wormholesystems-containers)](https://github.com/WormholeSystems/wormholesystems-containers/commits) |
+| [wormholesystems-cli](https://github.com/WormholeSystems/wormholesystems-cli) | `wsctl` — setup wizard and management tool | [![CI](https://github.com/WormholeSystems/wormholesystems-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/WormholeSystems/wormholesystems-cli/actions/workflows/ci.yml) [![release](https://img.shields.io/github/v/release/WormholeSystems/wormholesystems-cli)](https://github.com/WormholeSystems/wormholesystems-cli/releases/latest) |
+
+**How it fits together:** [WormholeSystems](https://github.com/WormholeSystems/WormholeSystems) is the application itself. [wormholesystems-containers](https://github.com/WormholeSystems/wormholesystems-containers) packages it as a production docker stack (Traefik with automatic SSL, frankenPHP, MySQL, Redis, Reverb). [wsctl](https://github.com/WormholeSystems/wormholesystems-cli) sets that stack up interactively and keeps its EVE data updated.
+
+## Run your own instance
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://install.wormhole.systems | sh
+```
+
+One command installs `wsctl` and walks you through the whole setup — domains, EVE credentials, secrets, SSL, database. See the [container stack README](https://github.com/WormholeSystems/wormholesystems-containers#readme) for details and requirements.
 
 ## Features
 
-- **Interactive Maps**: Real-time wormhole mapping with drag-and-drop controls for visualizing wormhole chains.
+- **Interactive maps** — real-time wormhole mapping with drag-and-drop chain visualization
+- **Collaborative mapping** — live collaboration for corporations and alliances
+- **Signature tracking** — centralized wormhole signature management
+- **Smart routing** — pathfinding through chains with mass calculations
+- **Activity monitoring & intel** — killmail feeds, automated notes and insights per system
+- **Access control** — permission management down to character level
 
-- **Collaborative Mapping**: Real-time collaboration features for corporations and alliances.
+## Community & contact
 
-- **Activity Monitoring**: Real-time monitoring of activities in wormhole chains and systems.
+- **Discord**: [Join our Discord](https://discord.gg/rpfWCzVJS7)
+- **Email**: [nicolaskion07@gmail.com](mailto:nicolaskion07@gmail.com)
+- **Developer**: [NicolasKion](https://github.com/NicolasKion) — [nicolaskion.dev](https://nicolaskion.dev)
 
-- **Access Control**: Permission management system for controlling user access.
-
-- **Smart Routing**: Pathfinding through wormhole chains with mass calculations.
-
-- **Signature Tracking**: Centralized tracking and management of wormhole signatures.
-
-- **Intelligence**: Automated notes and insights for wormhole systems.
-
-## Platform Access
-
-The platform is available at [wormhole.systems](https://wormhole.systems/).
-
-## Contact Information
-
-### Community
-Join the Discord server for community support and discussions:
-
-**Discord**: [Join our Discord](https://discord.gg/rpfWCzVJS7)
-
-### Direct Contact
-**Email**: [nicolaskion07@gmail.com](mailto:nicolaskion07@gmail.com)
-
-**Developer**: [NicolasKion](https://github.com/NicolasKion)
-
-### Development
-Main repository: [WormholeSystems/WormholeSystems](https://github.com/WormholeSystems/WormholeSystems)
-
-## Contributing
-
-Contributions are welcome through bug reports, feature suggestions, and code contributions.
+Contributions are welcome — bug reports, feature suggestions and pull requests alike.
 
 ## License
 
-License information is available in individual repositories within the WormholeSystems ecosystem.
+MIT — see the individual repositories.
